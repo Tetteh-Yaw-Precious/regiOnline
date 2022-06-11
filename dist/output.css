@@ -2300,6 +2300,14 @@ body[dir="rtl"] .checkbox:checked,
   width: 25%;
 }
 
+.w-\[10\%\] {
+  width: 10%;
+}
+
+.w-\[15\%\] {
+  width: 15%;
+}
+
 .max-w-full {
   max-width: 100%;
 }
@@ -2328,6 +2336,10 @@ body[dir="rtl"] .checkbox:checked,
   gap: 0.25rem;
 }
 
+.gap-6 {
+  gap: 1.5rem;
+}
+
 .border {
   border-width: 1px;
 }
@@ -2345,6 +2357,11 @@ body[dir="rtl"] .checkbox:checked,
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-purple-700 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(126 34 206 / var(--tw-bg-opacity));
 }
 
 .p-12 {
@@ -2385,6 +2402,10 @@ body[dir="rtl"] .checkbox:checked,
   line-height: 1.5rem;
 }
 
+.font-bold {
+  font-weight: 700;
+}
+
 .lowercase {
   text-transform: lowercase;
 }
@@ -2393,10 +2414,25 @@ body[dir="rtl"] .checkbox:checked,
   text-transform: capitalize;
 }
 
+.text-purple-800 {
+  --tw-text-opacity: 1;
+  color: rgb(107 33 168 / var(--tw-text-opacity));
+}
+
+.text-purple-900 {
+  --tw-text-opacity: 1;
+  color: rgb(88 28 135 / var(--tw-text-opacity));
+}
+
 .shadow-lg {
   --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.hover\:bg-purple-800:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(107 33 168 / var(--tw-bg-opacity));
 }
 
 .focus\:border-2:focus {
@@ -2411,6 +2447,20 @@ body[dir="rtl"] .checkbox:checked,
 .focus\:outline-none:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
+}
+
+@media (min-width: 768px) {
+  .md\:w-\[15\%\] {
+    width: 15%;
+  }
+
+  .md\:w-\[12\%\] {
+    width: 12%;
+  }
+
+  .md\:w-\[10\%\] {
+    width: 10%;
+  }
 }
 
 @media (min-width: 1024px) {

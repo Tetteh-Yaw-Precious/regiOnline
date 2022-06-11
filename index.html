@@ -64,16 +64,19 @@
         </div> -->
     <!-- </div> -->
     <!-- </div> -->
-    <div class="flex justify-center items-center w-[100%] min-h-screen">
+    <div
+      class="flex flex-col justify-center items-center w-[100%] min-h-screen gap-6"
+    >
+      <img src="./assets/logofull.svg" alt="" class="md:w-[10%]" />
       <form
         class="loginform p-12 bg-white lg:w-[25%] flex flex-col gap-4 shadow-lg"
       >
         <div class="heading-ct flex flex-col gap-2">
           <div class="alerts display-none"></div>
-          <h5 class="text-xl">✨ Hello Freshers</h5>
+          <h5 class="text-xl text-purple-900 font-bold">✨ Hello Students</h5>
           <p class="text-base">
-            Log in to check your fee balance,<br />
-            register , make payments and more...
+            Welcome to RegiOnline,<br />
+            let's help you register courses, pay fees and more ...
           </p>
         </div>
         <div class="input-ct flex flex-col gap-4">
@@ -95,7 +98,10 @@
             />
           </div>
         </div>
-        <button class="btn submit btn-full capitalize" type="submit">
+        <button
+          class="btn submit btn-full capitalize bg-purple-700 hover:bg-purple-800"
+          type="submit"
+        >
           Sign in
         </button>
       </form>
