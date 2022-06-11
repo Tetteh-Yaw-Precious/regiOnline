@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "compile:sass": "sass scss/main.scss css/main.css --watch",
+    "dev": "npx tailwindcss -i ./src/tailwind.css -o ./dist/output.css --watch",
     "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/main.css -o css/style.prefix.css"
   },
   "keywords": [],
@@ -23,6 +24,7 @@
     "dart-sass": "^1.25.0",
     "postcss-cli": "^9.1.0",
     "postcss-loader": "^6.2.1",
-    "sass": "^1.37.5"
+    "sass": "^1.37.5",
+    "tailwindcss": "^3.1.2"
   }
 }
