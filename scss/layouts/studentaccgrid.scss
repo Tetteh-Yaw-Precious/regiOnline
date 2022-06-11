@@ -1,0 +1,118 @@
+@use '../abstracts/variables.scss' as *;
+@use '../abstracts/functions.scss' as *;
+@use '../abstracts/mixins.scss' as *;
+@use '../base/typography.scss' as *;
+
+.studentAcc {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  grid-template-rows: 13% 87%;
+  grid-template-areas:
+    "one one"
+    "two three";
+  @include respond(phone) {
+    display: flex;
+    flex-direction: column;
+  }
+  .stAcc-heading {
+    grid-area: one;
+    padding-left: 10%;
+    display: flex;
+    align-items: center;
+    h5 {
+      border-bottom: rem(2) solid $blue;
+      padding-bottom: rem(4);
+    }
+    @include respond(phone) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  .stAcc-graph {
+    grid-area: two;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    @include respond(phone) {
+      display: flex;
+      flex-direction: column;
+    }
+    .canvas-ct {
+      display: flex;
+      height: 100%;
+      width: 75%;
+      @include respond(phone) {
+        display: flex;
+      }
+    }
+  }
+  .stAcc-info {
+    grid-area: three;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    @include respond(phone) {
+      display: flex;
+      flex-direction: column;
+    }
+    .fee-item {
+      padding: 0.1rem;
+      width: 100%;
+      min-height: 22%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      @include respond(phone) {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 4rem;
+        border-bottom: rem(1) solid $ui-gray-2;
+        padding: 0.5rem 0;
+      }
+      h6 {
+        font-family: $poppinsFont;
+        font-size: rem(20);
+        span {
+          color: $blue;
+          font-family: $poppinsFont;
+        }
+      }
+      p {
+        font-weight: 600;
+      }
+    }
+    .eligiblefees-ct {
+      h6 {
+        color: $success;
+        span {
+          color: $success;
+        }
+      }
+      p {
+        color: $success;
+      }
+      .ineligible {
+        color: $danger !important;
+      }
+    }
+    .noteligiblefees-ct {
+      height: 30%;
+      .np-heading {
+        padding: rem(2);
+        p {
+          font-weight: 400;
+          font-size: rem(13);
+          span {
+            color: $danger;
+          }
+        }
+      }
+    }
+  }
+}

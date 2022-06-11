@@ -1,0 +1,30 @@
+@use '../abstracts/variables.scss'as *;
+@use '../abstracts/functions.scss'as *;
+@use '../abstracts/mixins.scss'as *;
+@use '../base/typography.scss'as *;
+
+.dashboardgrid {
+  width: 100%;
+  min-height: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 10% 40% 30% 10%;
+  grid-template-areas:
+    "head head"
+    "acc det"
+    "csinfo det"
+    "btn det";
+  grid-row-gap: rem(20);
+  grid-column-gap: rem(15);
+  padding: 2% 5%;
+  // div {
+  //   background-color: white;
+  //   background-color: ;
+  // }
+  @include respond(phone) {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    grid-column-gap: rem(15);
+  }
+}

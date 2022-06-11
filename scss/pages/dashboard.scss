@@ -1,0 +1,284 @@
+@use "../abstracts/variables.scss" as *;
+@use "../abstracts/functions.scss" as *;
+@use "../abstracts/mixins.scss" as *;
+@use "../base/typography.scss" as *;
+
+body {
+  background-color: $bg-light;
+}
+
+.welcome {
+  grid-area: head;
+  display: flex;
+  width: 100%;
+  @include respond(phone) {
+    width: 100%;
+  }
+
+  .congrats-container {
+    width: 80%;
+    display: flex;
+    @include respond(phone) {
+      width: 75%;
+      display: flex;
+      justify-content: flex-start;
+    }
+
+    .congrats-container-ct {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @include respond(phone) {
+        justify-content: space-evenly;
+      }
+      .nav-open {
+        img {
+          display: none;
+          @include respond(phone) {
+            display: block;
+          }
+        }
+      }
+
+      .cg-img-ct {
+        width: 10%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        align-items: center;
+
+        img {
+          width: 60%;
+          @include respond(phone) {
+            width: 100%;
+            justify-self: self-end;
+          }
+        }
+      }
+
+      h4 {
+        font-family: $markScript;
+        padding: 0.4rem;
+        @include respond(phone) {
+          display: none;
+        }
+      }
+
+      .welcomemess {
+        font-family: $primaryFont;
+        color: $dark;
+        font-weight: 500;
+      }
+    }
+  }
+
+  .studentimagedropdown {
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    @include respond(phone) {
+    }
+
+    .stu-img-dpdwn-ct {
+      display: flex;
+      height: 100%;
+      justify-content: space-evenly;
+      align-items: center;
+      width: 36%;
+      @include respond(phone) {
+        width: 50%;
+      }
+
+      .student-img-ct {
+        width: rem(40);
+        height: 70%;
+        border-radius: rem(5000);
+        display: flex;
+        @include respond(phone) {
+          height: 60%;
+        }
+      }
+      .dropdown-ct {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 100%;
+        width: rem(540);
+        .signout {
+          width: 7.5%;
+          text-align: center;
+          position: absolute;
+          padding: 0rem 2rem;
+          top: 5.8rem;
+          right: 4.3rem;
+          background-color: white;
+          padding: 0.5rem 0rem;
+          @include respond(phone) {
+            top: 4rem;
+            right: 1.3rem;
+            width: 20%;
+          }
+        }
+      }
+    }
+  }
+}
+
+.studentAcc {
+  grid-area: acc;
+}
+.studD {
+  grid-area: det;
+  @include respond(phone) {
+    min-height: 35rem;
+  }
+  .studD-heading {
+    height: 6%;
+    background-color: $blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h4 {
+      color: white;
+      font-size: rem(18);
+    }
+  }
+  .studD-content {
+    height: 85%;
+  }
+  .studD-upload {
+    height: 10%;
+  }
+}
+
+.courseinfo {
+  grid-area: csinfo;
+}
+
+.button {
+  grid-area: btn;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  .imageinput {
+    height: 50%;
+    display: flex;
+    width: 70%;
+    align-items: center;
+    justify-content: center;
+    label {
+      height: 100%;
+      width: 60%;
+      display: flex;
+      align-items: center;
+      color: white;
+      font-weight: 200;
+      padding: 0rem 2rem;
+      background-color: $blue;
+    }
+    span{
+      border: 1px solid red;
+      width: 60%;
+      height: 100%;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  .btn {
+    background-color: $success;
+    width: 100%;
+  }
+}
+.paymentpopup {
+  background-color: #e0e0e0f7;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  position: absolute;
+  right: 0%;
+  margin-left: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include respond(phone) {
+    display: absolute;
+    right: 0%;
+    width: 100%;
+  }
+  .amount-ct {
+    width: 25%;
+    height: 30%;
+    @include respond(phone) {
+      width: 80%;
+    }
+    .amountone {
+      height: 25%;
+      background-color: $ui-blue-1;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 5%;
+      h6 {
+        color: white;
+      }
+      a {
+        color: white;
+        font-weight: 700;
+        padding: rem(7) rem(10);
+        border-radius: 100%;
+        color: $blue;
+        background-color: white;
+      }
+    }
+    .amounttwo {
+      height: 60%;
+      border: 1px solid $ui-blue-1;
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+      padding: 2% 4%;
+
+      label {
+        margin-bottom: 0.6rem;
+      }
+      input {
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+}
+
+.loadinganimation {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  .loading {
+    width: 2rem;
+    height: 2rem;
+    border-top: 5px solid $primary-orange;
+    border-left: 5px solid $primary-orange;
+    border-radius: 100%;
+    margin: auto;
+    visibility: auto;
+    animation: spin 0.4s infinite linear;
+  }
+}
+input::-webkit-file-upload-button {
+  border: 1px solid red;
+}
+.display-active {
+  display: none;
+}

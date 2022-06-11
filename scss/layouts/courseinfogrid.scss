@@ -1,0 +1,96 @@
+@use '../abstracts/variables.scss'as *;
+@use '../abstracts/functions.scss'as *;
+@use '../abstracts/mixins.scss'as *;
+@use '../base/typography.scss'as *;
+
+.courseinfo {
+    display: grid;
+    grid-template-columns: 47.5% 5% 47.5%;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: "one two three"
+        "four two five"
+        "six six six"
+    ;
+
+
+    .ci-1 {
+        grid-area: one;
+        display: grid;
+        grid-template-columns: 20% 80%;
+        grid-template-rows: 55% 45%;
+        grid-template-areas: "one one"
+        "two three";
+       
+    }
+    .coursei-1{
+        grid-area: one;
+        padding-left: 20%;
+        // border: 1px solid rgb(68, 0, 255);
+        display: flex;
+        align-items: flex-end;
+        h6{
+            font-family: $poppinsFont;
+            font-size: rem(16);
+            color: $dark;
+        }
+    }
+    .coursei-2{
+        grid-area: two;
+    }
+    .coursei-3{
+        grid-area: three;
+    }
+
+    .ci-2 {
+        grid-area: two;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding-top: .8rem;
+        hr{
+            height: 80%;
+            border: rem(1) solid $ui-gray-2;
+            width: rem(1);
+        }
+    }
+
+    .ci-3 {
+        grid-area: three;
+        display: grid;
+        grid-template-columns: 20% 80%;
+        grid-template-rows: 55% 45%;
+        grid-template-areas: "one one"
+        "two three";
+    }
+
+    .ci-4 {
+        grid-area: four;
+        display: grid;
+        grid-template-columns: 20% 80%;
+        grid-template-rows: 55% 45%;
+        grid-template-areas: "one one"
+        "two three";
+    }
+
+    .ci-5 {
+        grid-area: five;
+        display: grid;
+        grid-template-columns: 20% 80%;
+        grid-template-rows: 55% 45%;
+        grid-template-areas: "one one"
+        "two three";
+    }
+
+    .ci-6 {
+        grid-area: six;
+        display: grid;
+        grid-template-columns: 20% 80%;
+        grid-template-rows: 55% 45%;
+        grid-template-areas: "one one"
+        "two three";
+        .coursei-1{
+            padding-left: 10%;
+        }
+        
+    }
+}

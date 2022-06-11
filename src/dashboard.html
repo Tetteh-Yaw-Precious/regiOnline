@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>kTU|Student Dashboard</title>
+  <link rel="stylesheet" href="../css/style.prefix.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js"
+    integrity="sha512-Wt1bJGtlnMtGP0dqNFH1xlkLBNpEodaiQ8ZN5JLA5wpc1sUlk/O5uuOMNgvzddzkpvZ9GLyYNa8w2s7rqiTk5Q=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://checkout.flutterwave.com/v3.js"></script>
+  
+</head>
+
+<body>
+  <div class="dashboardflex-ct">
+    <nav id="navbar">
+      <div class="icon">
+        <img src="../assets/openicon.svg" alt="" id="navclose" />
+      </div>
+      <ul class="nav-link-ct">
+        <li>
+          <a href="#"><img src="../assets/Home.svg" alt="Home" /> Home</a>
+        </li>
+        <li>
+          <a href="#" id="payfees" class="payfees"><img src="../assets/creditcards.svg" alt="creditcards" /> Pay
+            fees</a>
+        </li>
+        <li id="cardofficebtn">
+          <a href="#"><img src="../assets/card.svg" alt="" /> Card Office</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="maindashboard-ct dashboardgrid">
+      <div class="welcome cardShadow">
+        <div class="congrats-container">
+          <div class="congrats-container-ct">
+            <div class="nav-open">
+              <img src="../assets/openiconblue.svg" class="navopen" alt="navoen" id="navopen">
+            </div>
+            <div class="cg-img-ct">
+              <img src="../assets/ktulogonew.svg" alt="" />
+            </div>
+            <h4>Congratulations!</h4>
+            <h5 class="welcomemess">
+              welcome to KTU
+              <span id="firstName1"></span>
+            </h5>
+          </div>
+        </div>
+        <div class="studentimagedropdown">
+          <div class="stu-img-dpdwn-ct">
+            <div class="student-img-ct">
+              <img src="../assets/dummyperson.svg" alt="userimage" />
+            </div>
+            <div class="dropdown-ct">
+              <a href="#" class="dropdownarrow">
+                <img src="../assets/dropdownarrow.svg" alt="dropdownarrow" id="dropdownarrow" />
+              </a>
+              <a href="#" class="signout cardShadow display-active">Sign out</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="studentAcc cardShadow">
+        <div class="stAcc-heading">
+          <h5>Student Account</h5>
+        </div>
+        <div class="stAcc-graph">
+          <div class="canvas-ct">
+            <canvas id="moneyGraph"></canvas>
+          </div>
+        </div>
+        <div class="stAcc-info">
+          <div class="totalfees-ct fee-item">
+            <h6>GHC <span id="totalfees"></span>.00</h6>
+            <p>Total fees</p>
+          </div>
+          <div class="eligiblefees-ct fee-item" id="eligiblefees-ct">
+            <h6 id="pfeesh6">GHC <span id="paidfees"></span>.00</h6>
+            <p id="paid">paid</p>
+          </div>
+          <div class="noteligiblefees-ct fee-item">
+            <span class="np-heading">
+              <p> <img src="../assets/dot.svg" alt="dot" /> <span class="feeinfo"> Not Eligible to
+                  Register</span></p>
+              </p>
+              <p>
+                means not eligible to register
+              </p>
+          </div>
+        </div>
+      </div>
+      <div class="studD cardShadow">
+        <div class="studD-heading">
+          <h4>Student Details</h4>
+        </div>
+        <div class="studD-content">
+          <div class="grid-item-1">
+            <h5>Basic Details</h5>
+          </div>
+          <div class="grid-item-2">
+            <div class="item-ct1">
+              <h6>Last Name</h6>
+            </div>
+            <div class="item-ct2">
+              <p id="lastName2"></p>
+            </div>
+          </div>
+          <div class="grid-item-3">
+            <div class="item-ct1">
+              <h6>Other Name</h6>
+            </div>
+            <div class="item-ct2">
+              <p id="otherName"></p>
+            </div>
+          </div>
+          <div class="grid-item-4">
+            <div class="item-ct1">
+              <h6>first Name</h6>
+            </div>
+            <div class="item-ct2">
+              <p id="firstName2"></p>
+            </div>
+          </div>
+          <div class="grid-item-5">
+            <div class="item-ct1">
+              <h6>Date of Birth</h6>
+            </div>
+            <div class="item-ct2">
+              <p id="dob"></p>
+            </div>
+          </div>
+          <div class="grid-item-6">
+            <div class="item-ct1">
+              <h6>Sex</h6>
+            </div>
+            <div class="item-ct2">
+              <p id="sex"></p>
+            </div>
+          </div>
+          <div class="grid-item-7">
+            <div class="item-ct1">
+              <h6>Place of Birth</h6>
+            </div>
+            <div class="item-ct2">
+              <p id="pob"></p>
+            </div>
+          </div>
+          <div class="grid-item-8">
+            <div class="item-ct1">
+              <h6>Nationality</h6>
+            </div>
+            <div class="item-ct2">
+              <p id="nationality"></p>
+            </div>
+          </div>
+          <div class="grid-item-9">
+            <div class="item-ct1">
+              <h6>Program Session</h6>
+            </div>
+            <div class="item-ct2">
+              <p id="programSession"></p>
+            </div>
+          </div>
+          <div class="grid-item-10">
+            <div class="item-ct1">
+              <h6>Tel</h6>
+            </div>
+            <div class="item-ct2">
+              <p id="tel"></p>
+            </div>
+          </div>
+          <div class="grid-item-11">
+            <div class="item-ct1">
+              <h6>Edu.Background</h6>
+            </div>
+            <div class="item-ct2">
+              <p id="eduBackground"></p>
+            </div>
+          </div>
+          <div class="grid-item-12">
+            <div class="item-ct1">
+              <h6>Result Slip</h6>
+            </div>
+            <div class="item-ct2">
+              <p id="resultSlip"></p>
+            </div>
+          </div>
+          <div class="grid-item-13">
+            <div class="item-ct1">
+              <h6>Residencial Address</h6>
+            </div>
+            <div class="item-ct2">
+              <p id="residencialAddress"></p>
+            </div>
+          </div>
+          <div class="grid-item-14">
+            <div class="item-ct1">
+              <h6>Father's name</h6>
+            </div>
+            <div class="item-ct2">
+              <p id="fatherName"></p>
+            </div>
+          </div>
+          <div class="grid-item-15">
+            <div class="item-ct1">
+              <h6>Father's Occupation</h6>
+            </div>
+            <div class="item-ct2">
+              <p id="fatherOcc"></p>
+            </div>
+          </div>
+          <div class="grid-item-16">
+            <div class="item-ct1">
+              <h6>Mother's Name</h6>
+            </div>
+            <div class="item-ct2">
+              <p id="motherName"></p>
+            </div>
+          </div>
+          <div class="grid-item-17">
+            <div class="item-ct1">
+              <h6>Mother's Occupation</h6>
+            </div>
+            <div class="item-ct2">
+              <p id="motherOcc"></p>
+            </div>
+          </div>
+        </div>
+        <div class="studD-upload"></div>
+      </div>
+      <div class="courseinfo cardShadow">
+        <div class="ci-1">
+          <div class="coursei-1">
+            <h6 id="admissionYear"></h6>
+          </div>
+          <div class="coursei-2"></div>
+          <div class="coursei-3">
+            <p>Admission year</p>
+          </div>
+        </div>
+        <div class="ci-2">
+          <hr />
+        </div>
+        <div class="ci-3">
+          <div class="coursei-1">
+            <h6 id="faculty">FAST</h6>
+          </div>
+          <div class="coursei-2"></div>
+          <div class="coursei-3">
+            <p>Faculty</p>
+          </div>
+        </div>
+        <div class="ci-4">
+          <div class="coursei-1">
+            <h6 id="completionYear"></h6>
+          </div>
+          <div class="coursei-2"></div>
+          <div class="coursei-3">Completion year</div>
+        </div>
+        <div class="ci-5">
+          <div class="coursei-1">
+            <h6 id="department"></h6>
+          </div>
+          <div class="coursei-2"></div>
+          <div class="coursei-3">Department</div>
+        </div>
+        <div class="ci-6">
+          <div class="coursei-1">
+            <h6>Computer Science Department</h6>
+          </div>
+          <div class="coursei-2"></div>
+          <div class="coursei-3">
+            <p id="programme"></p>
+          </div>
+        </div>
+      </div>
+      <div class="item button btn-ct">
+        <a href="#" class="btn" id="registerCourses">Proceed</a>
+      </div>
+    </div>
+  </div>
+  <!-- make payment popup -->
+  <div class="paymentpopup display-active" id="paymentPopup">
+    <form class="amount-ct" id="amountform">
+      <div class="amountone">
+        <h6>Enter amount to pay</h6>
+        <a href="#" class="close">X</a>
+      </div>
+      <div class="amounttwo">
+        <label for="amount">Enter amount</label>
+        <input type="text" id="inputamount" required>
+
+        <input type="submit" class="btn proceed" id="proceed" value="Proceed" />
+      </div>
+    </form>
+  </div>
+  <!-- loading animation -->
+  <div class="loadinganimation" id="loadingAnimation">
+    <div class="loading " id="loading"></div>
+  </div>
+
+  <!-- register courses popup -->
+  <div class="registerpopup display-active" id="regPopup">
+    <div class="popup-ct cardShadow">
+      <div class="item popup-heading">
+        <h6>Register Courses</h6>
+        <a href="#"><img src="../assets/close.svg" alt="close" id="close"></a>
+      </div>
+
+      <h2 for="studentId">Computer Science Department  |   Level 100/ Sem. 1</h2>
+      <div class="new">
+        <form id="regpopupform">
+          <div class="form-group">
+            <input type="checkbox" id="africans" required>
+            <label for="africans">African Studies</label>
+          </div>
+          <div class="form-group">
+            <input type="checkbox" id="Vb" required>
+            <label for="Vb" name="Vb">Visual Basic</label>
+          </div>
+          <div class="form-group">
+            <input type="checkbox" id="p-stats" required>
+            <label for="p-stats">Probability and statistics</label>
+          </div>
+          <div class="form-group">
+            <input type="checkbox" id="Commskill" required>
+            <label for="Commskill">Communication skills</label>
+          </div>
+          <div class="form-group">
+            <input type="checkbox" id="mathsC" required>
+            <label for="mathsC">Computer Science Maths</label>
+          </div>
+          <h2 class="second">Upload image for student Card</h2>
+          <!--from vendor-->
+          <input name="additem" type="file" accept="image/*" id="imageupload-js" required/>
+          <input name="postitem" type="submit"/>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class=" cardoffice display-active cardshadow">
+    <div class="iconct">
+      <div class="closeicon"><img src="/assets/closetwo.svg" alt="" id="closeicontwo"></div>
+    </div>
+    <div class="imagect">
+    </div>
+    <div class="forwarddate">
+      <h4 id="message"></h4>
+      <h3 id="dateforcollection"></h3>
+    </div>
+  </div>
+
+  <!-- update the version number as needed -->
+  <script src="sweetalert2.all.min.js"></script>
+  
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-storage.js"></script>
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-analytics.js"></script>
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyC8doDMea5l_RsDGv-azH3WrNO6fXX-hyo",
+      authDomain: "ktu-srs.firebaseapp.com",
+      projectId: "ktu-srs",
+      storageBucket: "ktu-srs.appspot.com",
+      messagingSenderId: "853396546812",
+      appId: "1:853396546812:web:5e88f9689d1d792452e379",
+      measurementId: "G-JW65NM1EZP",
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+
+    console.log(firebase)
+    const db = firebase.firestore();
+    const auth = firebase.auth()
+    const storage = firebase.storage().ref();
+  </script>
+  <script src="../app/index.js"></script>
+  <script src="../app/dashboard.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+@use '../abstracts/variables.scss' as *;
+@use '../abstracts/functions.scss' as *;
+@use '../abstracts/mixins.scss' as *;
+@use '../base/typography.scss' as *;
+
+.dashboardflex-ct {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  min-height: 100vh;
+  @include respond(phone) {
+    height: 100%;
+  }
+  nav {
+    width: 20%;
+    background-color: $blue;
+    @include respond(phone) {
+      width: 100vh;
+      min-height: 100vh;
+      display: flex;
+      position: absolute;
+      z-index: 1;
+    }
+  }
+  .maindashboard-ct {
+    width: 80%;
+    @include respond(phone) {
+      width: 100%;
+    }
+  }
+}

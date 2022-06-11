@@ -1,0 +1,276 @@
+/*
+0 - 600px: Phone
+600 - 900px: Tablet portrait
+900 - 1200px: Tablet Landscape
+[1200 - 1800] is where our normal styles apply
+1800px + : Big desktop
+
+
+/*
+$breakpoint argument choices:
+--phone
+--tab-port
+--tab-land
+--big-desktop
+*/
+body {
+  background-color: #f6f8fa;
+}
+
+.welcome {
+  grid-area: head;
+  display: flex;
+  width: 100%;
+}
+@media (max-width: 37.5em) {
+  .welcome {
+    width: 100%;
+  }
+}
+.welcome .congrats-container {
+  width: 80%;
+  display: flex;
+}
+@media (max-width: 37.5em) {
+  .welcome .congrats-container {
+    width: 75%;
+    display: flex;
+    justify-content: flex-start;
+  }
+}
+.welcome .congrats-container .congrats-container-ct {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 37.5em) {
+  .welcome .congrats-container .congrats-container-ct {
+    justify-content: space-evenly;
+  }
+}
+.welcome .congrats-container .congrats-container-ct .nav-open img {
+  display: none;
+}
+@media (max-width: 37.5em) {
+  .welcome .congrats-container .congrats-container-ct .nav-open img {
+    display: block;
+  }
+}
+.welcome .congrats-container .congrats-container-ct .cg-img-ct {
+  width: 10%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  align-items: center;
+}
+.welcome .congrats-container .congrats-container-ct .cg-img-ct img {
+  width: 60%;
+}
+@media (max-width: 37.5em) {
+  .welcome .congrats-container .congrats-container-ct .cg-img-ct img {
+    width: 100%;
+    justify-self: self-end;
+  }
+}
+.welcome .congrats-container .congrats-container-ct h4 {
+  font-family: "Marck Script", cursive;
+  padding: 0.4rem;
+}
+@media (max-width: 37.5em) {
+  .welcome .congrats-container .congrats-container-ct h4 {
+    display: none;
+  }
+}
+.welcome .congrats-container .congrats-container-ct .welcomemess {
+  font-family: "Raleway", sans-serif;
+  color: #08112f;
+  font-weight: 500;
+}
+.welcome .studentimagedropdown {
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.welcome .studentimagedropdown .stu-img-dpdwn-ct {
+  display: flex;
+  height: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 36%;
+}
+@media (max-width: 37.5em) {
+  .welcome .studentimagedropdown .stu-img-dpdwn-ct {
+    width: 50%;
+  }
+}
+.welcome .studentimagedropdown .stu-img-dpdwn-ct .student-img-ct {
+  width: 2.5rem;
+  height: 70%;
+  border-radius: 312.5rem;
+  display: flex;
+}
+@media (max-width: 37.5em) {
+  .welcome .studentimagedropdown .stu-img-dpdwn-ct .student-img-ct {
+    height: 60%;
+  }
+}
+.welcome .studentimagedropdown .stu-img-dpdwn-ct .dropdown-ct {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+  width: 33.75rem;
+}
+.welcome .studentimagedropdown .stu-img-dpdwn-ct .dropdown-ct .signout {
+  width: 7.5%;
+  text-align: center;
+  position: absolute;
+  padding: 0rem 2rem;
+  top: 5.8rem;
+  right: 4.3rem;
+  background-color: white;
+  padding: 0.5rem 0rem;
+}
+@media (max-width: 37.5em) {
+  .welcome .studentimagedropdown .stu-img-dpdwn-ct .dropdown-ct .signout {
+    top: 4rem;
+    right: 1.3rem;
+    width: 20%;
+  }
+}
+
+.studentAcc {
+  grid-area: acc;
+}
+
+.studD {
+  grid-area: det;
+}
+@media (max-width: 37.5em) {
+  .studD {
+    min-height: 35rem;
+  }
+}
+.studD .studD-heading {
+  height: 6%;
+  background-color: #13266a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.studD .studD-heading h4 {
+  color: white;
+  font-size: 1.125rem;
+}
+.studD .studD-content {
+  height: 85%;
+}
+.studD .studD-upload {
+  height: 10%;
+}
+
+.courseinfo {
+  grid-area: csinfo;
+}
+
+.button {
+  grid-area: btn;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+}
+.button .btn {
+  background-color: #0fb60c;
+}
+
+.paymentpopup {
+  background-color: #e0e0e0f7;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  position: absolute;
+  right: 0%;
+  margin-left: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 37.5em) {
+  .paymentpopup {
+    display: absolute;
+    right: 0%;
+    width: 100%;
+  }
+}
+.paymentpopup .amount-ct {
+  width: 25%;
+  height: 30%;
+}
+@media (max-width: 37.5em) {
+  .paymentpopup .amount-ct {
+    width: 80%;
+  }
+}
+.paymentpopup .amount-ct .amountone {
+  height: 25%;
+  background-color: #596bab;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5%;
+}
+.paymentpopup .amount-ct .amountone h6 {
+  color: white;
+}
+.paymentpopup .amount-ct .amountone a {
+  color: white;
+  font-weight: 700;
+  padding: 0.4375rem 0.625rem;
+  border-radius: 100%;
+  color: #13266a;
+  background-color: white;
+}
+.paymentpopup .amount-ct .amounttwo {
+  height: 60%;
+  border: 1px solid #596bab;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 2% 4%;
+}
+.paymentpopup .amount-ct .amounttwo label {
+  margin-bottom: 0.6rem;
+}
+.paymentpopup .amount-ct .amounttwo input {
+  margin-bottom: 0.5rem;
+}
+
+.loadinganimation {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+}
+.loadinganimation .loading {
+  width: 2rem;
+  height: 2rem;
+  border-top: 5px solid #f45110;
+  border-left: 5px solid #f45110;
+  border-radius: 100%;
+  margin: auto;
+  visibility: auto;
+  -webkit-animation: spin 0.4s infinite linear;
+          animation: spin 0.4s infinite linear;
+}
+
+.display-active {
+  display: none;
+}/*# sourceMappingURL=dashboard.css.map */

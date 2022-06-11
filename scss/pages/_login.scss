@@ -1,0 +1,126 @@
+@use "../abstracts/variables.scss" as *;
+@use "../base/typography.scss" as *;
+@use "../abstracts/functions.scss" as *;
+@use "../abstracts/mixins.scss" as *;
+
+.login-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include respond(big-desktop) {
+    border: 5px solid green;
+  }
+  .login-container--inner {
+    width: 70%;
+    height: 70%;
+    display: flex;
+    @include respond(phone) {
+      height: 60%;
+      width: 100%;
+    }
+    .graduate-img-ct {
+      width: 30%;
+      height: 100%;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+      @include respond(phone) {
+        width: 20%;
+      }
+      @include respond(sm-phone) {
+        width: 15%;
+      }
+      
+      img {
+        width: rem(260);
+        position: relative;
+        left: rem(110);
+        z-index: 2;
+        @include respond(phone) {
+          width: rem(200);
+          left: rem(80);
+        }
+        @include respond(sm-phone) {
+          width: rem(210);
+          left: rem(70);
+        }
+      }
+    }
+    .form-ct {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      background-color: white;
+      @include respond(phone) {
+        width: 90%;
+      }
+      z-index: 1;
+      .form-img-ct {
+        height: 20%;
+        display: flex;
+        align-items: flex-end;
+        padding-left: 18%;
+        img {
+          width: 40%;
+        }
+      }
+      form {
+        height: 75%;
+        padding-top: 1.5rem;
+        padding-left: 10%;
+        // border: 1px solid teal;
+        .heading-ct {
+          padding-left: 10%;
+        }
+        .input-ct {
+          padding-top: rem(20);
+          display: flex;
+          flex-direction: column;
+          padding-left: 10%;
+          width: 80%;
+          min-height: 45%;
+          justify-content: space-between;
+          .username-ct,
+          .password-ct {
+            display: flex;
+            flex-direction: column;
+            min-height: 20% !important;
+          }
+          .username-ct label,
+          .password-ct label {
+            margin: 0 0 0.7rem 0;
+          }
+        }
+        .btn-ct {
+          padding-left: 10%;
+          .btn {
+            background-color: $blue;
+          }
+        }
+      }
+      .form-footer {
+        background-color: $blue;
+        min-height: 5%;
+        transform: translateY(rem(29));
+        opacity: 0;
+        animation: slidefrombottom 0.5s ease-in forwards;
+      }
+    }
+    // .cloud-img-ct {
+    //   width: 20%;
+    //   @include respond(sm-phone) {
+    //     width: 5%;
+    //   }
+    //   img {
+    //     width: rem(400);
+    //     position: absolute;
+    //     top: rem(4);
+    //     right: rem(200);
+    //     @include respond(sm-phone) {
+    //       width: width(rem(400));
+    //     }
+    //   }
+    // }
+  }
+}

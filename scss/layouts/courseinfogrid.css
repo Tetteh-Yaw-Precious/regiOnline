@@ -1,0 +1,88 @@
+/*
+0 - 600px: Phone
+600 - 900px: Tablet portrait
+900 - 1200px: Tablet Landscape
+[1200 - 1800] is where our normal styles apply
+1800px + : Big desktop
+
+
+/*
+$breakpoint argument choices:
+--phone
+--tab-port
+--tab-land
+--big-desktop
+*/
+.courseinfo {
+  display: grid;
+  grid-template-columns: 47.5% 5% 47.5%;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas: "one two three" "four two five" "six six six";
+}
+.courseinfo .ci-1 {
+  grid-area: one;
+  display: grid;
+  grid-template-columns: 20% 80%;
+  grid-template-rows: 55% 45%;
+  grid-template-areas: "one one" "two three";
+}
+.courseinfo .coursei-1 {
+  grid-area: one;
+  padding-left: 20%;
+  display: flex;
+  align-items: flex-end;
+}
+.courseinfo .coursei-1 h6 {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  color: #08112f;
+}
+.courseinfo .coursei-2 {
+  grid-area: two;
+}
+.courseinfo .coursei-3 {
+  grid-area: three;
+}
+.courseinfo .ci-2 {
+  grid-area: two;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 0.8rem;
+}
+.courseinfo .ci-2 hr {
+  height: 80%;
+  border: 0.0625rem solid #c3c5cc;
+  width: 0.0625rem;
+}
+.courseinfo .ci-3 {
+  grid-area: three;
+  display: grid;
+  grid-template-columns: 20% 80%;
+  grid-template-rows: 55% 45%;
+  grid-template-areas: "one one" "two three";
+}
+.courseinfo .ci-4 {
+  grid-area: four;
+  display: grid;
+  grid-template-columns: 20% 80%;
+  grid-template-rows: 55% 45%;
+  grid-template-areas: "one one" "two three";
+}
+.courseinfo .ci-5 {
+  grid-area: five;
+  display: grid;
+  grid-template-columns: 20% 80%;
+  grid-template-rows: 55% 45%;
+  grid-template-areas: "one one" "two three";
+}
+.courseinfo .ci-6 {
+  grid-area: six;
+  display: grid;
+  grid-template-columns: 20% 80%;
+  grid-template-rows: 55% 45%;
+  grid-template-areas: "one one" "two three";
+}
+.courseinfo .ci-6 .coursei-1 {
+  padding-left: 10%;
+}/*# sourceMappingURL=courseinfogrid.css.map */

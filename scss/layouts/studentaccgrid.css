@@ -1,0 +1,135 @@
+/*
+0 - 600px: Phone
+600 - 900px: Tablet portrait
+900 - 1200px: Tablet Landscape
+[1200 - 1800] is where our normal styles apply
+1800px + : Big desktop
+
+
+/*
+$breakpoint argument choices:
+--phone
+--tab-port
+--tab-land
+--big-desktop
+*/
+.studentAcc {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  grid-template-rows: 13% 87%;
+  grid-template-areas: "one one" "two three";
+}
+@media (max-width: 37.5em) {
+  .studentAcc {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.studentAcc .stAcc-heading {
+  grid-area: one;
+  padding-left: 10%;
+  display: flex;
+  align-items: center;
+}
+.studentAcc .stAcc-heading h5 {
+  border-bottom: 0.125rem solid #13266a;
+  padding-bottom: 0.25rem;
+}
+@media (max-width: 37.5em) {
+  .studentAcc .stAcc-heading {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.studentAcc .stAcc-graph {
+  grid-area: two;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+@media (max-width: 37.5em) {
+  .studentAcc .stAcc-graph {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.studentAcc .stAcc-graph .canvas-ct {
+  display: flex;
+  height: 100%;
+  width: 75%;
+}
+@media (max-width: 37.5em) {
+  .studentAcc .stAcc-graph .canvas-ct {
+    display: flex;
+  }
+}
+.studentAcc .stAcc-info {
+  grid-area: three;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 37.5em) {
+  .studentAcc .stAcc-info {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.studentAcc .stAcc-info .fee-item {
+  padding: 0.1rem;
+  width: 100%;
+  min-height: 22%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media (max-width: 37.5em) {
+  .studentAcc .stAcc-info .fee-item {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 4rem;
+    border-bottom: 0.0625rem solid #c3c5cc;
+    padding: 0.5rem 0;
+  }
+}
+.studentAcc .stAcc-info .fee-item h6 {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.25rem;
+}
+.studentAcc .stAcc-info .fee-item h6 span {
+  color: #13266a;
+  font-family: "Poppins", sans-serif;
+}
+.studentAcc .stAcc-info .fee-item p {
+  font-weight: 600;
+}
+.studentAcc .stAcc-info .eligiblefees-ct h6 {
+  color: #0fb60c;
+}
+.studentAcc .stAcc-info .eligiblefees-ct h6 span {
+  color: #0fb60c;
+}
+.studentAcc .stAcc-info .eligiblefees-ct p {
+  color: #0fb60c;
+}
+.studentAcc .stAcc-info .eligiblefees-ct .ineligible {
+  color: #f41010 !important;
+}
+.studentAcc .stAcc-info .noteligiblefees-ct {
+  height: 30%;
+}
+.studentAcc .stAcc-info .noteligiblefees-ct .np-heading {
+  padding: 0.125rem;
+}
+.studentAcc .stAcc-info .noteligiblefees-ct .np-heading p {
+  font-weight: 400;
+  font-size: 0.8125rem;
+}
+.studentAcc .stAcc-info .noteligiblefees-ct .np-heading p span {
+  color: #f41010;
+}/*# sourceMappingURL=studentaccgrid.css.map */

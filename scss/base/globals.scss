@@ -1,0 +1,151 @@
+@use "../abstracts/variables.scss" as *;
+@use "../base/typography.scss" as *;
+@use "../abstracts/functions.scss" as *;
+@use "../abstracts/mixins.scss" as *;
+@import url("https://fonts.googleapis.com/css2?family=Marck+Script&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  font-family: $primaryFont;
+  color: #333;
+  //defines what 1 rem is
+  font-size: 98%;
+  @include respond(phone) {
+    font-size: 97% !important;
+  } //600
+  @include respond(tab-land) {
+    font-size: 97%;
+  } //900
+  @include respond(tab-port) {
+    font-size: 96%;
+  } //1200
+  @include respond(big-desktop) {
+    font-size: 100%;
+  }
+  body {
+    box-sizing: border-box;
+    background-color: $bg-light;
+  }
+  h1 {
+    font-size: 1.75rem;
+    font-family: $primaryFont;
+    font-style: normal;
+    font-weight: 600;
+  }
+
+  h2 {
+    letter-spacing: 3%;
+    font-size: 1.125rem;
+    line-height: 2.4375rem;
+    letter-spacing: -0.04em;
+  }
+
+  h3 {
+    font-family: $primaryFont;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.375rem;
+    padding: 0.25rem 0.125rem;
+    margin: 0 0 0.9375rem 0;
+    width: 20%;
+  }
+  h4 {
+    font-size: rem(24);
+    font-weight: 700;
+    color: $blue;
+    margin: 0;
+  }
+  h5 {
+    font-size: rem(18);
+    line-height: rem(24);
+    font-weight: 700;
+    color: $blue;
+  }
+  h6 {
+    font-size: rem(20);
+    line-height: rem(24);
+    font-weight: 700;
+    color: $blue;
+  }
+
+  p {
+    font-family: $primaryFont;
+    line-height: rem(15);
+    color: $dark;
+  }
+
+  li {
+    list-style-type: none;
+  }
+
+  a {
+    font-size: $primaryFontSize;
+    text-decoration: none;
+  }
+
+  input {
+    border: none !important;
+    background-color: none;
+    border-bottom: rem(2) solid $ui-gray-2 !important;
+    outline: none !important;
+    padding-bottom: rem(5);
+    font-size: 1rem;
+  }
+  label {
+    font-size: 1rem;
+    font-weight: 600;
+    color: $dark;
+  }
+  .btn-ct {
+    width: 80%;
+    min-height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .btn {
+    padding: rem(10) 0;
+    width: 100%;
+
+    color: white;
+    text-align: center;
+    font-size: rem(15);
+    font-weight: 700;
+    background-color: $success;
+  }
+  .btn:hover {
+    box-shadow: 0px rem(4) rem(4) rgba(0, 0, 0, 0.08);
+  }
+}
+textarea {
+  resize: none;
+  border-radius: 3.125rem;
+  padding-left: 1.6rem;
+  padding-top: 1rem;
+  border: none;
+}
+svg {
+  cursor: pointer;
+}
+.container {
+  min-height: 100vh;
+}
+
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  font-size: 0.9rem;
+}
+::-moz-placeholder {
+  /* Firefox 19+ */
+  font-size: 0.9rem;
+}
+:-ms-input-placeholder {
+  /* IE 10+ */
+  font-size: 0.9rem;
+}
+:-moz-placeholder {
+  /* Firefox 18- */
+  font-size: 0.9rem;
+}

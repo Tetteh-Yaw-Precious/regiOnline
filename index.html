@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0,maximum-scale=1.0,user-scalable=0"
+    />
+    <title>KTU|Registration System</title>
+    <!-- <link rel="stylesheet" href="../css/style.prefix.css" /> -->
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <div class="login-container">
+      <div class="login-container--inner">
+        <div class="graduate-img-ct">
+          <img src="../assets/graduate.svg" alt="" srcset="" />
+        </div>
+        <div class="form-ct cardShow">
+          <div class="form-img-ct">
+            <img src="../assets/schoollogo.svg" alt="" />
+          </div>
+          <form class="loginform">
+            <div class="heading-ct">
+              <div class="alerts display-none"></div>
+              <h5>Hello Freshers</h5>
+              <p>
+                Log in to check your fee balance,<br />
+                register , make payments and more...
+              </p>
+            </div>
+            <div class="input-ct">
+              <div class="username-ct">
+                <label for="username">username</label>
+                <input
+                  type="text"
+                  placeholder="Enter your full name"
+                  class="emailfield"
+                  required
+                />
+              </div>
+              <div class="password-ct">
+                <label for="password">Password</label>
+                <input
+                  type="password"
+                  placeholder="Enter your password"
+                  class="passwordfield"
+                  required
+                />
+              </div>
+            </div>
+            <div class="btn-ct">
+              <button class="btn submit" type="submit">Login</button>
+            </div>
+          </form>
+          <div class="form-footer"></div>
+        </div>
+        <!-- <div class="cloud-img-ct">
+          <img src="../assets/cloud.svg" alt="" srcset="" />
+        </div> -->
+      </div>
+    </div>
+    <!-- update the version number as needed -->
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-auth.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-analytics.js"></script>
+    <script>
+      const firebaseConfig = {
+        apiKey: "AIzaSyC8doDMea5l_RsDGv-azH3WrNO6fXX-hyo",
+        authDomain: "ktu-srs.firebaseapp.com",
+        projectId: "ktu-srs",
+        storageBucket: "ktu-srs.appspot.com",
+        messagingSenderId: "853396546812",
+        appId: "1:853396546812:web:5e88f9689d1d792452e379",
+        measurementId: "G-JW65NM1EZP",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+
+      const db = firebase.firestore();
+      const auth = firebase.auth();
+    </script>
+    <script src="../app/SignIn.js"></script>
+  </body>
+</html>

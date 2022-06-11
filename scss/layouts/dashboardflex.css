@@ -1,0 +1,47 @@
+/*
+0 - 600px: Phone
+600 - 900px: Tablet portrait
+900 - 1200px: Tablet Landscape
+[1200 - 1800] is where our normal styles apply
+1800px + : Big desktop
+
+
+/*
+$breakpoint argument choices:
+--phone
+--tab-port
+--tab-land
+--big-desktop
+*/
+.dashboardflex-ct {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  min-height: 100vh;
+}
+@media (max-width: 37.5em) {
+  .dashboardflex-ct {
+    height: 100%;
+  }
+}
+.dashboardflex-ct nav {
+  width: 20%;
+  background-color: #13266a;
+}
+@media (max-width: 37.5em) {
+  .dashboardflex-ct nav {
+    width: 100vh;
+    min-height: 100vh;
+    display: flex;
+    position: absolute;
+    z-index: 1;
+  }
+}
+.dashboardflex-ct .maindashboard-ct {
+  width: 80%;
+}
+@media (max-width: 37.5em) {
+  .dashboardflex-ct .maindashboard-ct {
+    width: 100%;
+  }
+}/*# sourceMappingURL=dashboardflex.css.map */

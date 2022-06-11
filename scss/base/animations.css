@@ -1,0 +1,83 @@
+/*
+0 - 600px: Phone
+600 - 900px: Tablet portrait
+900 - 1200px: Tablet Landscape
+[1200 - 1800] is where our normal styles apply
+1800px + : Big desktop
+
+
+/*
+$breakpoint argument choices:
+--phone
+--tab-port
+--tab-land
+--big-desktop
+*/
+@-webkit-keyframes slidefrombottom {
+  0% {
+    transform: translateY(0.9375rem);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slidefrombottom {
+  0% {
+    transform: translateY(0.9375rem);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes slidein {
+  from {
+    transform: translateX(-37.5rem);
+  }
+  to {
+    transform: translate(0);
+  }
+}
+@keyframes slidein {
+  from {
+    transform: translateX(-37.5rem);
+  }
+  to {
+    transform: translate(0);
+  }
+}
+@-webkit-keyframes slideout {
+  from {
+    transform: translate(0);
+  }
+  to {
+    transform: translateX(-37.5rem);
+  }
+}
+@keyframes slideout {
+  from {
+    transform: translate(0);
+  }
+  to {
+    transform: translateX(-37.5rem);
+  }
+}/*# sourceMappingURL=animations.css.map */

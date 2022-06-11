@@ -1,0 +1,34 @@
+/*
+0 - 600px: Phone
+600 - 900px: Tablet portrait
+900 - 1200px: Tablet Landscape
+[1200 - 1800] is where our normal styles apply
+1800px + : Big desktop
+
+
+/*
+$breakpoint argument choices:
+--phone
+--tab-port
+--tab-land
+--big-desktop
+*/
+.dashboardgrid {
+  width: 100%;
+  min-height: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 10% 40% 30% 10%;
+  grid-template-areas: "head head" "acc det" "csinfo det" "btn det";
+  grid-row-gap: 1.25rem;
+  grid-column-gap: 0.9375rem;
+  padding: 2% 5%;
+}
+@media (max-width: 37.5em) {
+  .dashboardgrid {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    grid-column-gap: 0.9375rem;
+  }
+}/*# sourceMappingURL=dashboardgrid.css.map */
