@@ -11,6 +11,7 @@
   color: #333;
   //defines what 1 rem is
   font-size: 98%;
+  font-family: "Lato", sans-serif;
   @include respond(phone) {
     font-size: 97% !important;
   } //600
@@ -85,14 +86,14 @@
     text-decoration: none;
   }
 
-  input {
-    border: none !important;
-    background-color: none;
-    border-bottom: rem(2) solid $ui-gray-2 !important;
-    outline: none !important;
-    padding-bottom: rem(5);
-    font-size: 1rem;
-  }
+  // input {
+  //   border: none !important;
+  //   background-color: none;
+  //   border-bottom: rem(2) solid $ui-gray-2 !important;
+  //   outline: none !important;
+  //   padding-bottom: rem(5);
+  //   font-size: 1rem;
+  // }
   label {
     font-size: 1rem;
     font-weight: 600;
@@ -133,19 +134,19 @@ svg {
   min-height: 100vh;
 }
 
-::-webkit-input-placeholder {
-  /* Chrome/Opera/Safari */
-  font-size: 0.9rem;
-}
-::-moz-placeholder {
-  /* Firefox 19+ */
-  font-size: 0.9rem;
-}
-:-ms-input-placeholder {
-  /* IE 10+ */
-  font-size: 0.9rem;
-}
-:-moz-placeholder {
-  /* Firefox 18- */
-  font-size: 0.9rem;
-}
+// ::-webkit-input-placeholder {
+//   /* Chrome/Opera/Safari */
+//   font-size: 0.9rem;
+// }
+// ::-moz-placeholder {
+//   /* Firefox 19+ */
+//   font-size: 0.9rem;
+// }
+// :-ms-input-placeholder {
+//   /* IE 10+ */
+//   font-size: 0.9rem;
+// }
+// :-moz-placeholder {
+//   /* Firefox 18- */
+//   font-size: 0.9rem;
+// }

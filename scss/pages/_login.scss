@@ -31,7 +31,7 @@
       @include respond(sm-phone) {
         width: 15%;
       }
-      
+
       img {
         width: rem(260);
         position: relative;
@@ -79,7 +79,7 @@
           flex-direction: column;
           padding-left: 10%;
           width: 80%;
-          min-height: 45%;
+          gap: 1rem;
           justify-content: space-between;
           .username-ct,
           .password-ct {
@@ -87,10 +87,10 @@
             flex-direction: column;
             min-height: 20% !important;
           }
-          .username-ct label,
-          .password-ct label {
-            margin: 0 0 0.7rem 0;
-          }
+          // .username-ct label,
+          // .password-ct label {
+          //   margin: 0 0 0.7rem 0;
+          // }
         }
         .btn-ct {
           padding-left: 10%;

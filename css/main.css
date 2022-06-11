@@ -21,6 +21,7 @@ $breakpoint argument choices:
   font-family: "Raleway", sans-serif;
   color: #333;
   font-size: 98%;
+  font-family: "Lato", sans-serif;
 }
 @media (max-width: 37.5em) {
   * {
@@ -98,14 +99,6 @@ $breakpoint argument choices:
   font-size: 1rem;
   text-decoration: none;
 }
-* input {
-  border: none !important;
-  background-color: none;
-  border-bottom: 0.125rem solid #c3c5cc !important;
-  outline: none !important;
-  padding-bottom: 0.3125rem;
-  font-size: 1rem;
-}
 * label {
   font-size: 1rem;
   font-weight: 600;
@@ -145,26 +138,6 @@ svg {
 
 .container {
   min-height: 100vh;
-}
-
-::-webkit-input-placeholder {
-  /* Chrome/Opera/Safari */
-  font-size: 0.9rem;
-}
-
-::-moz-placeholder {
-  /* Firefox 19+ */
-  font-size: 0.9rem;
-}
-
-:-ms-input-placeholder {
-  /* IE 10+ */
-  font-size: 0.9rem;
-}
-
-:-moz-placeholder {
-  /* Firefox 18- */
-  font-size: 0.9rem;
 }
 
 @keyframes slidefrombottom {
@@ -821,7 +794,7 @@ nav .nav-link-ct li a:hover {
   flex-direction: column;
   padding-left: 10%;
   width: 80%;
-  min-height: 45%;
+  gap: 1rem;
   justify-content: space-between;
 }
 .login-container .login-container--inner .form-ct form .input-ct .username-ct,
@@ -829,10 +802,6 @@ nav .nav-link-ct li a:hover {
   display: flex;
   flex-direction: column;
   min-height: 20% !important;
-}
-.login-container .login-container--inner .form-ct form .input-ct .username-ct label,
-.login-container .login-container--inner .form-ct form .input-ct .password-ct label {
-  margin: 0 0 0.7rem 0;
 }
 .login-container .login-container--inner .form-ct form .btn-ct {
   padding-left: 10%;
