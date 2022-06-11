@@ -13,17 +13,14 @@
       href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
       rel="stylesheet"
     />
-    <title>KTU|Registration System</title>
+    <title>regiOnline</title>
     <!-- <link rel="stylesheet" href="../css/style.prefix.css" /> -->
     <link rel="stylesheet" href="./css/main.css" />
     <link rel="stylesheet" href="./dist/output.css" />
   </head>
   <body>
-    <div class="login-container">
-      <div class="login-container--inner">
-        <div class="graduate-img-ct">
-          <img src="../assets/graduate.svg" alt="" srcset="" />
-        </div>
+    <!-- <div class="login-container"> -->
+    <!-- <div class="login-container--inner">
         <div class="form-ct cardShow">
           <div class="form-img-ct">
             <img src="../assets/schoollogo.svg" alt="" />
@@ -62,10 +59,46 @@
           </form>
           <div class="form-footer"></div>
         </div>
-        <!-- <div class="cloud-img-ct">
+        <div class="cloud-img-ct">
           <img src="../assets/cloud.svg" alt="" srcset="" />
         </div> -->
-      </div>
+    <!-- </div> -->
+    <!-- </div> -->
+    <div class="flex justify-center items-center w-[100%] min-h-screen">
+      <form
+        class="loginform p-12 bg-white lg:w-[25%] flex flex-col gap-4 shadow-lg"
+      >
+        <div class="heading-ct flex flex-col gap-2">
+          <div class="alerts display-none"></div>
+          <h5 class="text-xl">✨ Hello Freshers</h5>
+          <p class="text-base">
+            Log in to check your fee balance,<br />
+            register , make payments and more...
+          </p>
+        </div>
+        <div class="input-ct flex flex-col gap-4">
+          <div class="username-ct">
+            <label for="username">Email</label>
+            <input
+              type="email"
+              placeholder="Enter your email"
+              class="input w-full max-w-full border-gray-400 focus:outline-none focus:border-purple-900 focus:border-2"
+            />
+          </div>
+          <div class="password-ct">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              placeholder="Enter your password"
+              class="input w-full max-w-full border-gray-400 focus:outline-none focus:border-purple-900 focus:border-2"
+              required
+            />
+          </div>
+        </div>
+        <div class="btn-ct">
+          <button class="btn submit btn-wide" type="submit">Sign in</button>
+        </div>
+      </form>
     </div>
     <!-- update the version number as needed -->
     <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>

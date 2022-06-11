@@ -7,7 +7,7 @@
   margin: 0;
   padding: 0;
   box-sizing: inherit;
-  font-family: $primaryFont;
+  // font-family: $primaryFont;
   color: #333;
   //defines what 1 rem is
   font-size: 98%;
@@ -26,7 +26,6 @@
   }
   body {
     box-sizing: border-box;
-    background-color: $bg-light;
   }
   h1 {
     font-size: 1.75rem;
