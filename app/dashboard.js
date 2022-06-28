@@ -28,7 +28,6 @@ auth.onAuthStateChanged((user) => {
   //if the user has signed in, go ahead and get the user data from the database
   if (user) {
     //getting counter for student index numbers and flutterwave tx_ref
-    console.log(user.uid);
     // db.collection("User_Data")
     //   .doc("student_index")
     //   .onSnapshot((doc) => {
@@ -44,7 +43,6 @@ auth.onAuthStateChanged((user) => {
       .doc("GVGNNXOkRNSWEhFOUXRFQFjGfB42")
       .onSnapshot((doc) => {
         data = doc.data();
-        console.log(data);
         // doc.set({firstname: "man"});
         //setting localStorage data
         //get their ids and insert the data into them

@@ -14,7 +14,6 @@ loginForm.addEventListener("submit", (e) => {
     .then(() => {
       auth.onAuthStateChanged(function (currentUser) {
         if (currentUser) {
-          console.log(currentUser);
           setTimeout(() => {
             //store email in localstorage
             localStorage.setItem("email", email);
@@ -24,7 +23,6 @@ loginForm.addEventListener("submit", (e) => {
           alerts.innerHTML = "login successful";
           alerts.style.color = "green";
           alerts.classList.remove("display-none");
-          console.log(currentUser);
         }
         loginForm.reset();
       });
@@ -33,6 +31,5 @@ loginForm.addEventListener("submit", (e) => {
       alerts.innerHTML = err.message;
       alerts.style.color = "red";
       alerts.classList.remove("display-none");
-      console.log(err);
     });
 });
