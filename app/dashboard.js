@@ -28,24 +28,24 @@ auth.onAuthStateChanged((user) => {
   //if the user has signed in, go ahead and get the user data from the database
   if (user) {
     //getting counter for student index numbers and flutterwave tx_ref
-
-    db.collection("User_Data")
-      .doc("student_index")
-      .onSnapshot((doc) => {
-        data = doc.data();
-        localStorage.setItem("localStorageCounter", data.counter);
-        count = localStorage.getItem("localStorageCounter");
-      });
+    console.log(user.uid);
+    // db.collection("User_Data")
+    //   .doc("student_index")
+    //   .onSnapshot((doc) => {
+    //     data = doc.data();
+    //     localStorage.setItem("localStorageCounter", data.counter);
+    //     count = localStorage.getItem("localStorageCounter");
+    //   });
 
     /**go to the User_Data collection where email is equal
      * to the email retrieved from localstorage*/
 
     db.collection("User_Data")
-      .doc(user.uid)
+      .doc("GVGNNXOkRNSWEhFOUXRFQFjGfB42")
       .onSnapshot((doc) => {
         data = doc.data();
+        console.log(data);
         // doc.set({firstname: "man"});
-
         //setting localStorage data
         //get their ids and insert the data into them
         document.getElementById("dob").innerHTML = data.dob;

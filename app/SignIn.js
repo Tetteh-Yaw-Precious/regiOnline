@@ -14,6 +14,7 @@ loginForm.addEventListener("submit", (e) => {
     .then(() => {
       auth.onAuthStateChanged(function (currentUser) {
         if (currentUser) {
+          console.log(currentUser);
           setTimeout(() => {
             //store email in localstorage
             localStorage.setItem("email", email);

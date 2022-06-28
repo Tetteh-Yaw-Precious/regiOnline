@@ -300,9 +300,9 @@
     </form>
   </div>
   <!-- loading animation -->
-  <div class="loadinganimation" id="loadingAnimation">
+  <!-- <div class="loadinganimation" id="loadingAnimation">
     <div class="loading " id="loading"></div>
-  </div>
+  </div> -->
 
   <!-- register courses popup -->
   <div class="registerpopup display-active" id="regPopup">
@@ -368,20 +368,19 @@
          https://firebase.google.com/docs/web/setup#available-libraries -->
   <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-analytics.js"></script>
   <script>
-    const firebaseConfig = {
-      apiKey: "AIzaSyC8doDMea5l_RsDGv-azH3WrNO6fXX-hyo",
-      authDomain: "ktu-srs.firebaseapp.com",
-      projectId: "ktu-srs",
-      storageBucket: "ktu-srs.appspot.com",
-      messagingSenderId: "853396546812",
-      appId: "1:853396546812:web:5e88f9689d1d792452e379",
-      measurementId: "G-JW65NM1EZP",
-    };
+      const firebaseConfig = {
+        apiKey: "AIzaSyBp80ABTxs44FEi0GDdAjZWrQvs4jqjYe0",
+        authDomain: "regionline-13ef2.firebaseapp.com",
+        projectId: "regionline-13ef2",
+        storageBucket: "regionline-13ef2.appspot.com",
+        messagingSenderId: "47138142145",
+        appId: "1:47138142145:web:389ff3d48fdced35ba6140",
+        measurementId: "G-PY2754V8CP",
+      };
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
     firebase.analytics();
 
-    console.log(firebase)
     const db = firebase.firestore();
     const auth = firebase.auth()
     const storage = firebase.storage().ref();
