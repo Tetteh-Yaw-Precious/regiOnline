@@ -11,7 +11,7 @@ let massPopChart = new Chart(moneyGraph, {
       {
         label: "Population",
         data: [40, 60],
-        backgroundColor: ["#13266a", "#0fb60c"],
+        backgroundColor: ["#7e22ce", "#0fb60c"],
         fontFamily: "Raleway",
       },
     ],

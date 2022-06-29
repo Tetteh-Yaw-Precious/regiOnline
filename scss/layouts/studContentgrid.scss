@@ -1,13 +1,13 @@
-@use '../abstracts/variables.scss'as *;
-@use '../base/typography.scss'as *;
-@use '../abstracts/functions.scss'as *;
-@use '../abstracts/mixins.scss'as *;
+@use "../abstracts/variables.scss" as *;
+@use "../base/typography.scss" as *;
+@use "../abstracts/functions.scss" as *;
+@use "../abstracts/mixins.scss" as *;
 
 .studD-content {
   display: grid;
   padding: 2% 5%;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: rem(25) repeat(7, rem(50));
+  grid-template-rows: rem(25) repeat(7, rem(85));
   grid-template-areas:
     "one one one"
     "two three four"

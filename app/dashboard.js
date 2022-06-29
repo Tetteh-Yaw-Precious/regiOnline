@@ -17,10 +17,10 @@ let count;
 //loading animation
 const loadingcircle = () => {
   setTimeout(() => {
-    document.getElementById("loading").style.borderRight = "5px solid #f45110";
+    document.getElementById("loading").style.borderRight = "5px solid #ffffff";
   }, 100);
   setTimeout(() => {
-    document.getElementById("loading").style.borderBottom = "5px solid #f45110";
+    document.getElementById("loading").style.borderBottom = "5px solid #fffff";
   }, 200);
 };
 
@@ -91,7 +91,7 @@ auth.onAuthStateChanged((user) => {
               {
                 label: "Population",
                 data: [data.totalfees - data.paidfees, data.paidfees],
-                backgroundColor: ["#13266a", "#0fb60c"],
+                backgroundColor: ["#7e22ce", "#0fb60c"],
                 fontFamily: "Raleway",
               },
             ],
@@ -208,7 +208,7 @@ auth.onAuthStateChanged((user) => {
             customizations: {
               title: "School fees",
               description: "Payment of school fees",
-              logo: "../assets/ktulogonew.svg",
+              logo: "../assets/logo.png",
             },
           });
         };

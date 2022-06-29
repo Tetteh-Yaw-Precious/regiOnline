@@ -70,20 +70,20 @@ $breakpoint argument choices:
 * h4 {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #13266a;
+  color: #7e22ce;
   margin: 0;
 }
 * h5 {
   font-size: 1.125rem;
   line-height: 1.5rem;
   font-weight: 700;
-  color: #13266a;
+  color: #7e22ce;
 }
 * h6 {
   font-size: 1.25rem;
   line-height: 1.5rem;
   font-weight: 700;
-  color: #13266a;
+  color: #7e22ce;
 }
 * p {
   font-family: "Lato", sans-serif;
@@ -226,14 +226,14 @@ nav .nav-link-ct li a {
   color: white;
   font-size: 0.9375rem;
   height: 2.4375rem;
-  padding: 0 2.75rem;
+  padding: 2.5rem 2.75rem;
   align-items: center;
 }
 nav .nav-link-ct li a img {
   padding: 0 1.25rem;
 }
 nav .nav-link-ct li a:hover {
-  background-color: #08112f;
+  background-color: #54009e;
 }
 
 .registerpopup {
@@ -260,7 +260,7 @@ nav .nav-link-ct li a:hover {
 }
 .registerpopup .popup-ct .popup-heading {
   height: 30%;
-  background-color: #596bab;
+  background-color: #54009e;
   display: flex;
   align-items: center;
   padding: 0 2%;
@@ -301,7 +301,7 @@ nav .nav-link-ct li a:hover {
   padding: 0.625rem;
   color: white;
   border: none !important;
-  background: #596bab;
+  background: #54009e;
 }
 .registerpopup .btn-ct {
   width: 100%;
@@ -373,7 +373,7 @@ nav .nav-link-ct li a:hover {
 }
 .dashboardflex-ct nav {
   width: 20%;
-  background-color: #13266a;
+  background-color: #7e22ce;
 }
 @media (max-width: 37.5em) {
   .dashboardflex-ct nav {
@@ -417,7 +417,7 @@ nav .nav-link-ct li a:hover {
   display: grid;
   padding: 2% 5%;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 1.5625rem repeat(7, 3.125rem);
+  grid-template-rows: 1.5625rem repeat(7, 5.3125rem);
   grid-template-areas: "one one one" "two three four" "five six seven" "eight nine ten" "eleven twelve twelve" "thirteen thirteen thirteen" "fourteen fifteen fifteen" "sixteen seventeen seventeen";
   gap: 0.3125rem;
 }
@@ -598,7 +598,7 @@ nav .nav-link-ct li a:hover {
   align-items: center;
 }
 .studentAcc .stAcc-heading h5 {
-  border-bottom: 0.125rem solid #13266a;
+  border-bottom: 0.125rem solid #7e22ce;
   padding-bottom: 0.25rem;
 }
 @media (max-width: 37.5em) {
@@ -668,7 +668,7 @@ nav .nav-link-ct li a:hover {
   font-size: 1.25rem;
 }
 .studentAcc .stAcc-info .fee-item h6 span {
-  color: #13266a;
+  color: #7e22ce;
   font-family: "Poppins", sans-serif;
 }
 .studentAcc .stAcc-info .fee-item p {
@@ -805,10 +805,10 @@ nav .nav-link-ct li a:hover {
   padding-left: 10%;
 }
 .login-container .login-container--inner .form-ct form .btn-ct .btn {
-  background-color: #13266a;
+  background-color: #7e22ce;
 }
 .login-container .login-container--inner .form-ct .form-footer {
-  background-color: #13266a;
+  background-color: #7e22ce;
   min-height: 5%;
   transform: translateY(1.8125rem);
   opacity: 0;
@@ -844,6 +844,7 @@ body {
   height: 100%;
   width: 100%;
   display: flex;
+  gap: 2rem;
   justify-content: center;
   align-items: center;
 }
@@ -861,7 +862,7 @@ body {
   }
 }
 .welcome .congrats-container .congrats-container-ct .cg-img-ct {
-  width: 10%;
+  width: 20%;
   height: 100%;
   display: flex;
   align-items: center;
@@ -959,7 +960,7 @@ body {
 }
 .studD .studD-heading {
   height: 6%;
-  background-color: #13266a;
+  background-color: #7e22ce;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1002,7 +1003,7 @@ body {
   color: white;
   font-weight: 200;
   padding: 0rem 2rem;
-  background-color: #13266a;
+  background-color: #7e22ce;
 }
 .button .imageinput span {
   border: 1px solid red;
@@ -1048,7 +1049,7 @@ body {
 }
 .paymentpopup .amount-ct .amountone {
   height: 25%;
-  background-color: #596bab;
+  background-color: #54009e;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1062,12 +1063,12 @@ body {
   font-weight: 700;
   padding: 0.4375rem 0.625rem;
   border-radius: 100%;
-  color: #13266a;
+  color: #7e22ce;
   background-color: white;
 }
 .paymentpopup .amount-ct .amounttwo {
-  height: 60%;
-  border: 1px solid #596bab;
+  min-height: 60%;
+  border: 1px solid #54009e;
   background-color: white;
   display: flex;
   flex-direction: column;
@@ -1075,6 +1076,9 @@ body {
 }
 .paymentpopup .amount-ct .amounttwo label {
   margin-bottom: 0.6rem;
+}
+.paymentpopup .amount-ct .amounttwo input[type=number] {
+  padding: 0.7rem 0;
 }
 .paymentpopup .amount-ct .amounttwo input {
   margin-bottom: 0.5rem;
@@ -1084,7 +1088,7 @@ body {
   width: 100%;
   height: 100vh;
   position: absolute;
-  background-color: white;
+  background-color: #54009e;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1093,8 +1097,8 @@ body {
 .loadinganimation .loading {
   width: 2rem;
   height: 2rem;
-  border-top: 5px solid #f45110;
-  border-left: 5px solid #f45110;
+  border-top: 5px solid white;
+  border-left: 5px solid white;
   border-radius: 100%;
   margin: auto;
   visibility: auto;

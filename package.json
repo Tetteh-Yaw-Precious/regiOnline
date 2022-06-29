@@ -6,7 +6,7 @@
   "scripts": {
     "compile:sass": "sass scss/main.scss css/main.css --watch",
     "dev": "npx tailwindcss -i ./src/tailwind.css -o ./dist/output.css --watch",
-    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/main.css -o css/style.prefix.css"
+    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/main.css -o css/style.prefix.css --watch"
   },
   "keywords": [],
   "author": "",
