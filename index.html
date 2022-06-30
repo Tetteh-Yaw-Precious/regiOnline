@@ -7,59 +7,59 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0,maximum-scale=1.0,user-scalable=0"
     />
-    <title>KTU|Registration System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>regiOnline</title>
     <!-- <link rel="stylesheet" href="../css/style.prefix.css" /> -->
     <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./dist/output.css" />
   </head>
   <body>
-    <div class="login-container">
-      <div class="login-container--inner">
-        <div class="graduate-img-ct">
-          <img src="../assets/graduate.svg" alt="" srcset="" />
+    <div
+      class="flex flex-col justify-center items-center w-[100%] min-h-screen gap-6"
+    >
+      <img src="./assets/logofull.svg" alt="" class="md:w-[10%]" />
+      <form
+        class="loginform p-12 bg-white lg:w-[25%] flex flex-col gap-4 shadow-lg"
+      >
+        <div class="heading-ct flex flex-col gap-2">
+          <div class="alerts display-none"></div>
+          <h5 class="text-xl text-purple-900 font-bold">✨ Hello Students</h5>
+          <p class="text-base">
+            Welcome to RegiOnline,<br />
+            let's help you register courses, pay fees and more ...
+          </p>
         </div>
-        <div class="form-ct cardShow">
-          <div class="form-img-ct">
-            <img src="../assets/schoollogo.svg" alt="" />
+        <div class="input-ct flex flex-col gap-4">
+          <div class="username-ct">
+            <label for="username">Email</label>
+            <input
+              type="email"
+              placeholder="Enter your email"
+              class="input w-full max-w-full border-gray-400 focus:outline-none emailfield focus:border-purple-900 focus:border-2"
+            />
           </div>
-          <form class="loginform">
-            <div class="heading-ct">
-              <div class="alerts display-none"></div>
-              <h5>Hello Freshers</h5>
-              <p>
-                Log in to check your fee balance,<br />
-                register , make payments and more...
-              </p>
-            </div>
-            <div class="input-ct">
-              <div class="username-ct">
-                <label for="username">username</label>
-                <input
-                  type="text"
-                  placeholder="Enter your full name"
-                  class="emailfield"
-                  required
-                />
-              </div>
-              <div class="password-ct">
-                <label for="password">Password</label>
-                <input
-                  type="password"
-                  placeholder="Enter your password"
-                  class="passwordfield"
-                  required
-                />
-              </div>
-            </div>
-            <div class="btn-ct">
-              <button class="btn submit" type="submit">Login</button>
-            </div>
-          </form>
-          <div class="form-footer"></div>
+          <div class="password-ct">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              placeholder="Enter your password"
+              class="input w-full passwordfield max-w-full border-gray-400 focus:outline-none focus:border-purple-900 focus:border-2"
+              required
+            />
+          </div>
         </div>
-        <!-- <div class="cloud-img-ct">
-          <img src="../assets/cloud.svg" alt="" srcset="" />
-        </div> -->
-      </div>
+        <button
+          class="btn submit btn-full capitalize bg-purple-700 hover:bg-purple-800"
+          type="submit"
+        >
+          Sign in
+        </button>
+      </form>
     </div>
     <!-- update the version number as needed -->
     <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
@@ -69,15 +69,29 @@
          https://firebase.google.com/docs/web/setup#available-libraries -->
     <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-analytics.js"></script>
     <script>
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
       const firebaseConfig = {
-        apiKey: "AIzaSyC8doDMea5l_RsDGv-azH3WrNO6fXX-hyo",
-        authDomain: "ktu-srs.firebaseapp.com",
-        projectId: "ktu-srs",
-        storageBucket: "ktu-srs.appspot.com",
-        messagingSenderId: "853396546812",
-        appId: "1:853396546812:web:5e88f9689d1d792452e379",
-        measurementId: "G-JW65NM1EZP",
+        apiKey: "AIzaSyBp80ABTxs44FEi0GDdAjZWrQvs4jqjYe0",
+        authDomain: "regionline-13ef2.firebaseapp.com",
+        projectId: "regionline-13ef2",
+        storageBucket: "regionline-13ef2.appspot.com",
+        messagingSenderId: "47138142145",
+        appId: "1:47138142145:web:389ff3d48fdced35ba6140",
+        measurementId: "G-PY2754V8CP",
       };
+
+      // const firebaseConfig = {
+      //   apiKey: "AIzaSyBp80ABTxs44FEi0GDdAjZWrQvs4jqjYe0",
+      //   authDomain: "regionline-13ef2.firebaseapp.com",
+      //   projectId: "regionline-13ef2",
+      //   storageBucket: "regionline-13ef2.appspot.com",
+      //   messagingSenderId: "47138142145",
+      //   appId: "1:47138142145:web:389ff3d48fdced35ba6140",
+      //   measurementId: "G-PY2754V8CP",
+      // };
       // Initialize Firebase
       firebase.initializeApp(firebaseConfig);
       firebase.analytics();

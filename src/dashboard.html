@@ -5,8 +5,10 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>kTU|Student Dashboard</title>
+  <title>RegiOnilne|Student Dashboard</title>
   <link rel="stylesheet" href="../css/style.prefix.css" />
+  <link rel="stylesheet" href="../dist/output.css">
+  <link rel="stylesheet" href="../css/main.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js"
     integrity="sha512-Wt1bJGtlnMtGP0dqNFH1xlkLBNpEodaiQ8ZN5JLA5wpc1sUlk/O5uuOMNgvzddzkpvZ9GLyYNa8w2s7rqiTk5Q=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -15,14 +17,14 @@
 </head>
 
 <body>
-  <div class="dashboardflex-ct">
+  <div class="dashboardflex-ct bg-purple-500/10">
     <nav id="navbar">
       <div class="icon">
         <img src="../assets/openicon.svg" alt="" id="navclose" />
       </div>
       <ul class="nav-link-ct">
         <li>
-          <a href="#"><img src="../assets/Home.svg" alt="Home" /> Home</a>
+          <a href="#" class=""><img src="../assets/Home.svg" alt="Home" /> Home</a>
         </li>
         <li>
           <a href="#" id="payfees" class="payfees"><img src="../assets/creditcards.svg" alt="creditcards" /> Pay
@@ -39,14 +41,14 @@
         <div class="congrats-container">
           <div class="congrats-container-ct">
             <div class="nav-open">
-              <img src="../assets/openiconblue.svg" class="navopen" alt="navoen" id="navopen">
+              <img src="../assets/openiconblue.svg" class="navopen" alt="navopen" id="navopen">
             </div>
             <div class="cg-img-ct">
-              <img src="../assets/ktulogonew.svg" alt="" />
+              <img src="../assets/logo.svg" alt="" class="w-[100%]"/>
             </div>
             <h4>Congratulations!</h4>
             <h5 class="welcomemess">
-              welcome to KTU
+              on your admission
               <span id="firstName1"></span>
             </h5>
           </div>
@@ -54,7 +56,7 @@
         <div class="studentimagedropdown">
           <div class="stu-img-dpdwn-ct">
             <div class="student-img-ct">
-              <img src="../assets/dummyperson.svg" alt="userimage" />
+              <img src="../assets/dummyperson.svg" alt="userimage" class="w-16 max-w-sm"/>
             </div>
             <div class="dropdown-ct">
               <a href="#" class="dropdownarrow">
@@ -280,7 +282,7 @@
         </div>
       </div>
       <div class="item button btn-ct">
-        <a href="#" class="btn" id="registerCourses">Proceed</a>
+        <a href="#" class="btn" id="registerCourses">Register courses</a>
       </div>
     </div>
   </div>
@@ -293,7 +295,7 @@
       </div>
       <div class="amounttwo">
         <label for="amount">Enter amount</label>
-        <input type="text" id="inputamount" required>
+        <input type="number" id="inputamount" required class="border border-purple-700 h-15">
 
         <input type="submit" class="btn proceed" id="proceed" value="Proceed" />
       </div>
@@ -368,20 +370,19 @@
          https://firebase.google.com/docs/web/setup#available-libraries -->
   <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-analytics.js"></script>
   <script>
-    const firebaseConfig = {
-      apiKey: "AIzaSyC8doDMea5l_RsDGv-azH3WrNO6fXX-hyo",
-      authDomain: "ktu-srs.firebaseapp.com",
-      projectId: "ktu-srs",
-      storageBucket: "ktu-srs.appspot.com",
-      messagingSenderId: "853396546812",
-      appId: "1:853396546812:web:5e88f9689d1d792452e379",
-      measurementId: "G-JW65NM1EZP",
-    };
+      const firebaseConfig = {
+        apiKey: "AIzaSyBp80ABTxs44FEi0GDdAjZWrQvs4jqjYe0",
+        authDomain: "regionline-13ef2.firebaseapp.com",
+        projectId: "regionline-13ef2",
+        storageBucket: "regionline-13ef2.appspot.com",
+        messagingSenderId: "47138142145",
+        appId: "1:47138142145:web:389ff3d48fdced35ba6140",
+        measurementId: "G-PY2754V8CP",
+      };
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
     firebase.analytics();
 
-    console.log(firebase)
     const db = firebase.firestore();
     const auth = firebase.auth()
     const storage = firebase.storage().ref();

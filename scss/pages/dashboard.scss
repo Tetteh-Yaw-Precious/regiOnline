@@ -43,7 +43,7 @@ body {
       }
 
       .cg-img-ct {
-        width: 10%;
+        width: 20%;
         height: 100%;
         display: flex;
         align-items: center;
@@ -87,7 +87,8 @@ body {
       height: 100%;
       justify-content: space-evenly;
       align-items: center;
-      width: 36%;
+      width: 46%;
+      gap: 0.7rem;
       @include respond(phone) {
         width: 50%;
       }
@@ -182,7 +183,7 @@ body {
       padding: 0rem 2rem;
       background-color: $blue;
     }
-    span{
+    span {
       border: 1px solid red;
       width: 60%;
       height: 100%;
@@ -215,12 +216,12 @@ body {
   }
   .amount-ct {
     width: 25%;
-    height: 30%;
+    min-height: 40%;
     @include respond(phone) {
       width: 80%;
     }
     .amountone {
-      height: 25%;
+      min-height: 25%;
       background-color: $ui-blue-1;
       display: flex;
       align-items: center;
@@ -239,7 +240,7 @@ body {
       }
     }
     .amounttwo {
-      height: 60%;
+      min-height: 60%;
       border: 1px solid $ui-blue-1;
       background-color: white;
       display: flex;
@@ -248,6 +249,9 @@ body {
 
       label {
         margin-bottom: 0.6rem;
+      }
+      input[type="number"] {
+        padding: 0.7rem 0;
       }
       input {
         margin-bottom: 0.5rem;
@@ -258,9 +262,9 @@ body {
 
 .loadinganimation {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   position: absolute;
-  background-color: white;
+  background-color: $hover-dark;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -268,8 +272,8 @@ body {
   .loading {
     width: 2rem;
     height: 2rem;
-    border-top: 5px solid $primary-orange;
-    border-left: 5px solid $primary-orange;
+    border-top: 5px solid white;
+    border-left: 5px solid white;
     border-radius: 100%;
     margin: auto;
     visibility: auto;

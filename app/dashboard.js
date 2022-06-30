@@ -17,10 +17,10 @@ let count;
 //loading animation
 const loadingcircle = () => {
   setTimeout(() => {
-    document.getElementById("loading").style.borderRight = "5px solid #f45110";
+    document.getElementById("loading").style.borderRight = "5px solid #ffffff";
   }, 100);
   setTimeout(() => {
-    document.getElementById("loading").style.borderBottom = "5px solid #f45110";
+    document.getElementById("loading").style.borderBottom = "5px solid #fffff";
   }, 200);
 };
 
@@ -28,24 +28,22 @@ auth.onAuthStateChanged((user) => {
   //if the user has signed in, go ahead and get the user data from the database
   if (user) {
     //getting counter for student index numbers and flutterwave tx_ref
-
-    db.collection("User_Data")
-      .doc("student_index")
-      .onSnapshot((doc) => {
-        data = doc.data();
-        localStorage.setItem("localStorageCounter", data.counter);
-        count = localStorage.getItem("localStorageCounter");
-      });
+    // db.collection("User_Data")
+    //   .doc("student_index")
+    //   .onSnapshot((doc) => {
+    //     data = doc.data();
+    //     localStorage.setItem("localStorageCounter", data.counter);
+    //     count = localStorage.getItem("localStorageCounter");
+    //   });
 
     /**go to the User_Data collection where email is equal
      * to the email retrieved from localstorage*/
 
     db.collection("User_Data")
-      .doc(user.uid)
+      .doc("GVGNNXOkRNSWEhFOUXRFQFjGfB42")
       .onSnapshot((doc) => {
         data = doc.data();
         // doc.set({firstname: "man"});
-
         //setting localStorage data
         //get their ids and insert the data into them
         document.getElementById("dob").innerHTML = data.dob;
@@ -93,7 +91,7 @@ auth.onAuthStateChanged((user) => {
               {
                 label: "Population",
                 data: [data.totalfees - data.paidfees, data.paidfees],
-                backgroundColor: ["#13266a", "#0fb60c"],
+                backgroundColor: ["#7e22ce", "#0fb60c"],
                 fontFamily: "Raleway",
               },
             ],
@@ -166,7 +164,6 @@ auth.onAuthStateChanged((user) => {
           });
           registerBtn.disabled = true;
         }
-        console.log(registerBtn);
 
         const pkey = "FLWPUBK_TEST-bb162b39298e644e1f022c070ca2ad05-X";
         const makePayments = (e) => {
@@ -192,6 +189,7 @@ auth.onAuthStateChanged((user) => {
                   firebase.firestore.FieldValue.increment(amountvalue);
                 let updateIndexcounter =
                   firebase.firestore.FieldValue.increment(count++);
+                console.log(updatefees);
                 db.collection("User_Data").doc(user.uid).update({
                   paidfees: updatefees,
                   indexnumber: data.tx_ref,
@@ -210,7 +208,7 @@ auth.onAuthStateChanged((user) => {
             customizations: {
               title: "School fees",
               description: "Payment of school fees",
-              logo: "../assets/ktulogonew.svg",
+              logo: "../assets/logo.png",
             },
           });
         };

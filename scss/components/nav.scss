@@ -1,8 +1,8 @@
-@use '../abstracts/variables.scss' as *;
-@use '../base/typography.scss' as *;
-@use '../abstracts/functions.scss' as *;
-@use '../abstracts/mixins.scss' as *;
-@use '../base/animations.scss' as *;
+@use "../abstracts/variables.scss" as *;
+@use "../base/typography.scss" as *;
+@use "../abstracts/functions.scss" as *;
+@use "../abstracts/mixins.scss" as *;
+@use "../base/animations.scss" as *;
 
 nav {
   @include respond(phone) {
@@ -46,13 +46,13 @@ nav {
         color: white;
         font-size: rem(15);
         height: rem(39);
-        padding: 0 rem(44);
+        padding: rem(40) rem(44);
         align-items: center;
         img {
           padding: 0 rem(20);
         }
         &:hover {
-          background-color: $dark;
+          background-color: $hover-dark;
         }
       }
     }

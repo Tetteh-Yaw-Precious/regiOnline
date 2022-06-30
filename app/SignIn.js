@@ -23,7 +23,6 @@ loginForm.addEventListener("submit", (e) => {
           alerts.innerHTML = "login successful";
           alerts.style.color = "green";
           alerts.classList.remove("display-none");
-          console.log(currentUser);
         }
         loginForm.reset();
       });
@@ -32,6 +31,5 @@ loginForm.addEventListener("submit", (e) => {
       alerts.innerHTML = err.message;
       alerts.style.color = "red";
       alerts.classList.remove("display-none");
-      console.log(err);
     });
 });
