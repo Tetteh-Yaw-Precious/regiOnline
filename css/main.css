@@ -417,7 +417,7 @@ nav .nav-link-ct li a:hover {
   display: grid;
   padding: 2% 5%;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 1.5625rem repeat(7, 5.3125rem);
+  grid-template-rows: 1.5625rem repeat(7, 3.4375rem);
   grid-template-areas: "one one one" "two three four" "five six seven" "eight nine ten" "eleven twelve twelve" "thirteen thirteen thirteen" "fourteen fifteen fifteen" "sixteen seventeen seventeen";
   gap: 0.3125rem;
 }

@@ -164,7 +164,6 @@ auth.onAuthStateChanged((user) => {
           });
           registerBtn.disabled = true;
         }
-        console.log(registerBtn);
 
         const pkey = "FLWPUBK_TEST-bb162b39298e644e1f022c070ca2ad05-X";
         const makePayments = (e) => {
@@ -190,6 +189,7 @@ auth.onAuthStateChanged((user) => {
                   firebase.firestore.FieldValue.increment(amountvalue);
                 let updateIndexcounter =
                   firebase.firestore.FieldValue.increment(count++);
+                console.log(updatefees);
                 db.collection("User_Data").doc(user.uid).update({
                   paidfees: updatefees,
                   indexnumber: data.tx_ref,
